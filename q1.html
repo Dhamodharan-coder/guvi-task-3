@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //the two JSON have the same properties without order
+      var obj1 = {name: "person 1", age: 5};
+ var obj2 ={age: 5,name: "person 1"};
+   // the values are passed to the function arguments
+   function check(obj1, obj2){
+      
+     //iterate the obj2 using for in
+     for(key in obj2){
+         //check if both objects do not have the equal values of the same key
+         if(obj1[key] !== obj2[key]){
+             return false;
+         }
+     }
+     return true 
+   }
+   // calling the function 
+   console.log(check(obj1,obj2))
+    </script>
+</body>
+</html>
